@@ -27,6 +27,8 @@ The skill is designed around the three-stage model documented on agentskills.io:
 - **Discovery**: concise metadata and triggers in `SKILL.md`.
 - **Activation**: complete instructions load only when Kore-related work is detected.
 - **Execution**: references point to official Kore docs and machine-readable indexes.
+- **Calibration**: includes defaults, boundaries, and gotchas to reduce false positives and vague outputs.
+- **Progressive disclosure**: keeps core instructions in `SKILL.md` and loads `docs/reference.md` only when deeper navigation is needed.
 
 ## Usage
 

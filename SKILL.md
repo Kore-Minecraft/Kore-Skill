@@ -23,6 +23,28 @@ Kore is a **Kotlin** library for **Minecraft Java Edition 1.20+** datapacks: typ
 
 The agent should **not** assume the user has the Kore monorepo checked out. Prefer **official docs** and **Maven artifacts**. Use the [documentation index](./docs/reference.md) for page-by-page lookup.
 
+## Activation boundaries
+
+Use this skill when the user asks about:
+- Kore project setup or dependency configuration.
+- Building datapacks in Kotlin with Kore DSL.
+- Choosing between `kore`, `oop`, `helpers`, and `bindings`.
+- Finding official Kore docs for a concrete feature.
+
+Do not use this skill as the primary guidance for:
+- Bedrock edition tooling.
+- Vanilla datapack-only workflows with no Kotlin/Kore intent.
+- General Kotlin language teaching unrelated to Kore.
+
+## Default response procedure
+
+Follow this order unless the user already provided a narrower request:
+1. Confirm target: user wants **Kore for Java datapacks**.
+2. Provide minimal setup (dependency + compiler flag + JDK/Gradle baseline).
+3. Give a small, runnable DSL skeleton (`dataPack`, `function`, `generate*`).
+4. Route to exactly one or two official docs pages for next depth.
+5. Add optional module guidance (`oop`/`helpers`) only if needed.
+
 ## Prerequisites checklist
 
 1. **JDK 21+** and **Gradle** (Kore template uses the wrapper).
@@ -31,6 +53,14 @@ The agent should **not** assume the user has the Kore monorepo checked out. Pref
 4. Optional: [Kore Template](https://github.com/Kore-Minecraft/Kore-Template) for a ready project.
 
 **Snapshots:** Sonatype snapshot repo plus `VERSION-SNAPSHOT` when the user needs unreleased features (see [Getting Started](https://kore.ayfri.com/docs/getting-started)).
+
+## Gotchas
+
+- `-Xcontext-parameters` is required. Missing it often produces confusing compile errors.
+- `function("...")` path is logical datapack path, not a filesystem path with `.mcfunction` extension.
+- Start with `kore` only. Adding `oop` and `helpers` too early increases API noise and weakens guidance quality.
+- If behavior seems undocumented, check [Known Issues](https://kore.ayfri.com/docs/advanced/known-issues) before proposing workarounds.
+- Prefer stable docs and artifacts by default; use snapshots only when the user explicitly needs unreleased features.
 
 ## Installable modules (pick by need)
 
@@ -71,6 +101,20 @@ Add `oop` / `helpers` only when the user’s feature set justifies the extra API
 - [llms-full.txt](https://kore.ayfri.com/llms-full.txt) (expanded)
 
 Point users or tools at these when they want crawlable, consolidated reference outside the website navigation.
+
+## Progressive disclosure rules
+
+- Read `./docs/reference.md` when the user asks for a specific feature area, page path, or topic map.
+- Prefer linking only the most relevant docs page first; avoid dumping many links unless explicitly asked.
+- Use `llms.txt` or `llms-full.txt` only when broad, machine-readable indexing is requested.
+
+## Quality loop before final answer
+
+Before finalizing guidance:
+1. Verify the answer stays inside Java Edition + Kore scope.
+2. Verify setup includes dependency and `-Xcontext-parameters` when setup is discussed.
+3. Verify all links point to official Kore docs or clearly-labeled template/repo resources.
+4. Trim generic Kotlin/Minecraft advice that is not Kore-specific.
 
 ## Working inside the Kore repository (contributors)
 
