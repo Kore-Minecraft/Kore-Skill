@@ -1,0 +1,29 @@
+# VCS and editor metadata
+.git/
+.github/
+.idea/
+.vscode/
+
+# Cursor and local agent artifacts
+.cursor/
+agent-transcripts/
+terminals/
+
+# Build and package output
+build/
+dist/
+out/
+target/
+
+# Language/tool caches
+.gradle/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.venv/
+__pycache__/
+node_modules/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
