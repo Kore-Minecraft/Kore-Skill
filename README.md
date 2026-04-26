@@ -15,8 +15,8 @@ This repository packages practical, reusable guidance so an agent can:
 ```text
 Kore-Skill/
 ├── SKILL.md          # Main skill metadata + instructions (required)
-├── docs/
-│   └── reference.md  # Curated documentation map for fast navigation
+├── references/
+│   └── REFERENCE.md  # Curated documentation map for fast navigation
 ├── .agentignore      # Excludes non-essential files from skill loading
 └── README.md
 ```
@@ -28,7 +28,7 @@ The skill is designed around the three-stage model documented on agentskills.io:
 - **Activation**: complete instructions load only when Kore-related work is detected.
 - **Execution**: references point to official Kore docs and machine-readable indexes.
 - **Calibration**: includes defaults, boundaries, and gotchas to reduce false positives and vague outputs.
-- **Progressive disclosure**: keeps core instructions in `SKILL.md` and loads `docs/reference.md` only when deeper navigation is needed.
+- **Progressive disclosure**: keeps core instructions in `SKILL.md` and loads `references/REFERENCE.md` only when deeper navigation is needed.
 
 ## Usage
 

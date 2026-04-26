@@ -13,7 +13,7 @@ metadata:
 
 Kore is a **Kotlin** library for **Minecraft Java Edition 1.20+** datapacks: type-safe builders for functions, JSON data, commands, selectors, and worldgen. Bedrock and older MC versions are out of scope unless the user explicitly targets a fork.
 
-The agent should **not** assume the user has the Kore monorepo checked out. Prefer **official docs** and **Maven artifacts**. Use the [documentation index](./docs/reference.md) for page-by-page lookup.
+The agent should **not** assume the user has the Kore monorepo checked out. Prefer **official docs** and **Maven artifacts**. Use the [documentation index](./references/REFERENCE.md) for page-by-page lookup.
 
 ## Activation boundaries
 
@@ -96,7 +96,7 @@ Point users or tools at these when they want crawlable, consolidated reference o
 
 ## Progressive disclosure rules
 
-- Read `./docs/reference.md` when the user asks for a specific feature area, page path, or topic map.
+- Read `./references/REFERENCE.md` when the user asks for a specific feature area, page path, or topic map.
 - Prefer linking only the most relevant docs page first; avoid dumping many links unless explicitly asked.
 - Use `llms.txt` or `llms-full.txt` only when broad, machine-readable indexing is requested.
 
@@ -114,4 +114,4 @@ If the task is **Kore development** rather than **using** Kore: contributor docs
 
 ## Full documentation map
 
-For a complete topic list with links, read [reference.md](./docs/reference.md).
+For a complete topic list with links, read [reference.md](./references/REFERENCE.md).
