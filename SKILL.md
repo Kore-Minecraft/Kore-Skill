@@ -1,20 +1,12 @@
 ---
 name: kore-user-guide
 description: Teaches and guides use of Kore, the Kotlin library for generating Minecraft Java Edition datapacks. Covers Gradle setup, modules (kore, oop, helpers, bindings), DSL patterns, generation APIs, and where to read official documentation. Use when the user works with Kore, io.github.ayfri.kore, Minecraft datapacks in Kotlin, or asks how to build or structure Kore projects without browsing the full Kore repository.
-version: 1.0.0
-author: Ayfri
-tags:
-  - kotlin
-  - minecraft
-  - datapack
-  - kore
-  - game-dev
-triggers:
-  - kore
-  - datapack
-  - minecraft function
-  - mcfunction
-  - kotlin
+license: GPL-3.0-only
+metadata:
+  author: Ayfri
+  tags: kotlin,minecraft,datapack,kore,game-dev
+  triggers: kore,datapack,minecraft function,mcfunction,kotlin
+  version: "1.0.0"
 ---
 
 # Kore user guide (for assistive teaching)
