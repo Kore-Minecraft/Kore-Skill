@@ -5,8 +5,9 @@ An [Agent Skills](https://agentskills.io/home)-compatible skill that teaches AI 
 ## Purpose
 
 This repository packages practical, reusable guidance so an agent can:
-- Set up Kore projects correctly (Gradle, dependency, compiler flags).
+- Set up Kore projects correctly (Gradle plugin, dependency, JDK and Kotlin versions).
 - Explain the core DSL workflow (`dataPack`, `function`, `generate*`).
+- Spot code written for an older release and point to the renamed API.
 - Route users to official documentation by topic.
 - Distinguish end-user Kore usage from Kore contributor internals.
 
